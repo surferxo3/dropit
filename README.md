@@ -6,6 +6,9 @@ A minimalist & aesthetic drag’n’drop image uploader with image previews & cr
 * Supports adding, removing, & pre-populating of images very effeciently
 * Supports storing of original, thumbnail, & cropped images
 
+## Requirements
+Requires php_fileinfo.dll extension to be enabled in *php.ini*.
+
 ## Note
 * Following script versions have been used in *demo.html*
   * Dropzone v4.0.1 - [documentation] (http://www.dropzonejs.com/)
