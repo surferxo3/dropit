@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropit</title>
+
+	<!-- Include Meta Tag(s) -->
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width,initial-scale=1">
+  	<meta name="author" content="Mohammad Sharaf Ali">
+	<meta name="description" content="Dropit Image Uploader and Cropper Demo">
+
+	<!-- Include Stylesheet(s) -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="assets/css/dropzone.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="assets/css/cropper.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+</head>
+<body>
+    <!-- with modal start -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" title="Select gallery images" data-target="#galleryModal">Open Gallery Plugin</button>
+
+    <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="galleryModalLabel">Image(s) Selection</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="img-container" style="width: 551px; height: 145px">
+                        <img id="editable" src="uploads/default.png" class="cropper-hidden" />
+                        <div class="cropper-container container-bg"></div>
+                    </div>
+                    <button id="openCroppedView" type="button" class="btn btn-primary center-block" style=" margin-top: 10px; margin-bottom: 10px;" data-method="getCroppedCanvas">
+                        <span class="docs-tooltip" data-toggle="tooltip" title="Click to open cropped view">
+                            Get Cropped Canvas
+                        </span>
+                    </button>
+
+                    <form id="my-dropzone" class="dropzone" action="includes/processor.php">
+                        <input type="hidden" id="EndPoint" name="EndPoint" value="image/store" />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="closeGallery" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- with modal end -->
+
+    <!-- without modal start
+    <div class="img-container">
+        <img id="editable" src="uploads/default.png"  height="286" class="cropper-hidden" />
+        <div class="cropper-container container-bg"></div>
+    </div>
+    <div style="margin: auto; width: 15%; margin-top: 10px; margin-bottom: 10px;">
+    <button type="button" class="btn btn-primary" data-method="getCroppedCanvas">
+        <span class="docs-tooltip" data-toggle="tooltip" title="Click to open cropped view">
+            Get Cropped Canvas
+        </span>
+    </button>
+    </div>
+
+    <form id="my-dropzone" class="dropzone" action="includes/processor.php">
+        <input type="hidden" id="EndPoint" name="EndPoint" value="image/store" />
+    </form>
+    without modal end-->
+
+    <div id="getCroppedCanvasModal" class="modal fade docs-cropped" tabindex="-1" role="dialog" aria-labelledby="getCroppedCanvasTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="getCroppedCanvasTitle">Cropped Image Selection</h4>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" id="fodCloseProfile" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary canvasGet">Crop</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Javascript(s) -->
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/dropzone.js"></script>
+	<script type="text/javascript" src="assets/js/cropper.min.js"></script>
+	<script type="text/javascript" src="assets/js/init-cropper.js"></script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>

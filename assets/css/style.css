@@ -1,0 +1,18 @@
+.img-container {
+	margin: auto;
+	max-width: 880px;
+    min-width: 551px;
+	display: block;
+}
+
+#my-dropzone {
+	margin: auto;
+	max-width: 880px;
+	border: dashed;
+	border-color: #ff3636;
+}
+
+.modal .modal-body {
+    max-height: 420px;
+    overflow-y: auto;
+}
