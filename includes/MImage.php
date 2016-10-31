@@ -36,7 +36,6 @@ class MImage
     {
         return imagesx($this->image);
     }
-
     
     private function getHeight() 
     {
